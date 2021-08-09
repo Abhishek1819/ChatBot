@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/jquery.convform.css">
+    <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="JS/custom.js"></script>
+    <script type="text/javascript" src="JS/jquery.convform.js"></script> <!-- We use convform here -->
+</head>
+
+<body>
+    <div class="chat_icon">
+        <img src="img/comment.png" alt="">
+    </div>
+    <div class="chat_box">
+        <div id="chat" class="conv-form-wrapper">
+            <form action="" method="GET" class="hidden">
+                <select name="category" data-conv-question="Hello! How can I help you">
+                    <option value="Web Development">Website Development ?</option>
+                    <option value="DigitalMarketing">Digital Marketing ?</option>
+                </select>
+                <div data-conv-fork="category">
+                    <div data-conv-case="Web Development">
+                        <input type="text" name="domain_name" data-conv-question="Please, tell me your domain name">
+                    </div>
+                    <div data-conv-case="DigitalMarketing">
+                        <input type="text" name="company_name" data-conv-question="Please, tell me your company name">
+                    </div>
+                </div>
+                <input type="text" name="name" data-conv-question="Please, tell me your name">
+                <input data-conv-question="Type in your e-mail"
+                    data-pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$"
+                    id="email" type="email" name="email" required placeholder="What's your e-mail?">
+                <select data-conv-question="Confirm ?">
+                    <option value="Web Development">Confirm</option>
+                </select>
+            </form>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="navbar">
+            <div class="left">
+                <img src="img/lo.png" alt="">
+                <span class="logo-text">ChatBot</span>
+            </div>
+            <ul>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Service</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+        <section id="home">
+            <h1 class="h-primary">Abhi JQuery</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, aliquam.
+            </p>
+
+        </section>
+    </div>
+</body>
+
+</html>
